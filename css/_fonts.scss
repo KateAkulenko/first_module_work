@@ -1,8 +1,10 @@
 $primary-font: 'Josefin Sans';
 $secondary-font: 'Aleo';
 
+$primary-color-txt: #FFF;
+
 %h1 {
-    color: #FFF;
+    color: $primary-color-txt;
     font-family: $primary-font;
     font-size: 48px;
     font-style: normal;
@@ -12,7 +14,7 @@ $secondary-font: 'Aleo';
 }
 
 %sta {
-    color: #FFF;
+    color: $primary-color-txt;
     font-family: $primary-font;
     font-size: 22px;
     font-style: normal;
@@ -22,7 +24,7 @@ $secondary-font: 'Aleo';
 }
 
 %plh {
-    color: #999;
+    color: $primary-color-txt;
     font-family: $primary-font;
     font-size: 14px;
     font-style: normal;
@@ -32,7 +34,7 @@ $secondary-font: 'Aleo';
 }
 
 %h4 {
-    color: #FFF;
+    color: $primary-color-txt;
     font-family: $secondary-font;
     font-size: 14px;
     font-style: normal;
@@ -42,8 +44,19 @@ $secondary-font: 'Aleo';
     text-transform: uppercase;
 }
 
+%h3 {
+    color: $primary-color-txt;
+    font-family: $primary-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; 
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
 %pheader {
-    color: #FFF;
+    color: $primary-color-txt;
     text-align: center;
     font-family: $primary-font;
     font-size: 14px;
