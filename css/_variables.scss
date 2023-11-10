@@ -5,3 +5,30 @@
 }
 
 $primary_blue: #5373FD;
+
+%button {
+    color: $primary-color-txt;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    background-color: $primary_blue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-decoration: none;
+        
+    &:focus {
+            border: 5px solid blue;
+        }
+
+        &:hover {
+            background-color: #9eaef8;
+            border: 1px solid #9eaef8;
+        }
+    } 

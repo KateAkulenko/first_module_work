@@ -230,6 +230,42 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .container {
+        .why_info {
+            display: flex;
+            padding: 124px 112px 124px 0px;
+            gap: 136px;
+            .why_info_content {
+                border: 3px solid white;
+                width: 648px;
+                height: 324px;
+
+                h2 {
+                    @extend %h2;
+                    padding-bottom: 24px
+                }
+
+                .why_info_txt {
+                    @extend %body2;
+                    display: flex;
+                    flex-direction: column;
+                    height: 168px;
+                    justify-content: space-between;
+                }
+
+                .button {
+                    display: flex;
+                    align-self: flex-end;
+                      a {
+                    @extend %button;            
+                    }
+                }
+
+              
+            }
+        }
+    }
 }
 
 
