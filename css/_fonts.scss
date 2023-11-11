@@ -65,6 +65,26 @@ $primary-color-txt: #FFF;
     text-transform: capitalize;
     }
 
+%h6 {
+    color: $primary-color-txt;
+    font-family: $primary-font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; 
+    letter-spacing: 2px;
+}
+
+%h5 {
+    color: $primary-color-txt;
+    font-family: $primary-font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
 %pheader {
     color: $primary-color-txt;
     text-align: center;
@@ -77,12 +97,21 @@ $primary-color-txt: #FFF;
 }
 
 %body2 {
-color: $primary-color-txt;
-font-family: $primary-font;
-font-size: 16px;
-font-style: normal;
-font-weight: 300; 
-line-height: 28px;
-letter-spacing: 1.6px;
+    color: $primary-color-txt;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300; 
+    line-height: 28px;
+    letter-spacing: 1.6px;
 }
 
+%body1 {
+    color: $primary-color-txt;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2.8px;
+}

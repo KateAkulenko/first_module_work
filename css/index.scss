@@ -150,6 +150,9 @@
                 a {
                     text-decoration: none;
                     @extend %h4;
+                    &:hover {
+                        color: #9eaef8;
+                    }
                 }
             }
            
@@ -234,10 +237,11 @@
     .container {
         .why_info {
             display: flex;
+            align-items: center;
             padding: 124px 112px 124px 0px;
             gap: 136px;
+
             .why_info_content {
-                border: 3px solid white;
                 width: 648px;
                 height: 324px;
 
@@ -252,22 +256,244 @@
                     flex-direction: column;
                     height: 168px;
                     justify-content: space-between;
+                    padding-bottom: 32px;
                 }
 
-                .button {
+                a {
+                    display: flex;
+                    @extend %button;   
+                    padding: 20px 32px;
+                    width: max-content;
+                }
+            }
+
+            .why_info_img {
+                height: 456px;
+                width: 424px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 16px;
+  
+                .img_wrapper1 {
+                    img {
+                        width: 350px;
+                        height: 230px;
+                    }
+                
+                }
+
+                .img_wrapper2 {
                     display: flex;
                     align-self: flex-end;
-                      a {
-                    @extend %button;            
+                    img {
+                        width: 350px;
+                        height: 220px;
                     }
+                
                 }
+            }
+        }      
+    }
+}
 
-              
+.why_background2 {
+    width: 100%;
+    height: 306px;
+    background-color: #333;
+    .container {
+        @extend %header_div;
+        position: relative;
+
+        .line {
+            padding-top: 60px;
+        }
+
+        .icon_box {
+            display: flex;
+            gap: 25px;
+            position: absolute;
+            top: 107px;
+            left: 0;
+
+              .icon_box_item {
+            width: 424px;
+            height: 139px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+
+            svg {
+                width: 64px;
+                height: 64px;
+                padding: 16px;
+            } 
+
+            p {
+                @extend %h2;
+            }
             }
         }
     }
 }
 
+.book_now_1 {
+    height: 684px;
+    background-image: url(../img/spain1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container {
+        position: relative;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 256px;
+            width: 584px;
+            padding: 44px 32px 44px 32px;
+            background: rgba(35, 35, 35, 0.90);
+            position: absolute;
+            top: 220px;
+
+            .p1 {
+                @extend %h6;
+            }
+
+            .p2 {
+                @extend %h5;
+            }
+
+            .p3 {
+                @extend %body2;
+            }
+
+            a {
+                display: flex;
+                @extend %button;   
+                padding: 20px 57px;
+                width: max-content;
+            }
+        }
+    }
+}
+
+.book_now_2 {
+    height: 684px;
+    background-image: url(../img/spain2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container {
+        position: relative;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 256px;
+            width: 584px;
+            padding: 44px 32px 44px 32px;
+            background: rgba(35, 35, 35, 0.90);
+            position: absolute;
+            top: 220px;
+            right: 0;
+
+            .p1 {
+                @extend %h6;
+            }
+
+            .p2 {
+                @extend %h5;
+            }
+
+            .p3 {
+                @extend %body2;
+            }
+
+            a {
+                display: flex;
+                @extend %button;   
+                padding: 20px 57px;
+                width: max-content;
+            }
+        }
+    }
+}
+
+.rewiev {
+    height: 680px;
+    background-image: url(../img/review.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container {
+
+        h2 {
+            @extend %h2;
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        .rewiev_info {
+            display: flex;
+
+            .img_wrapper_3 {
+                width: 440px;
+                height: 280px;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            .rewiev_text {
+                width: 765px;
+                height: 184px;
+                padding: 48px 60px 48px 60px;
+                background-color: #333;
+
+                .p4 {
+                    @extend %h5;
+                    padding-bottom: 16px;
+                }
+                .p5 {
+                    @extend %body2;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 268px;
+    background-color: #000;
+
+    .p6 {
+        text-align: center;
+        @extend %h3;
+        padding-top: 80px;
+        padding-bottom: 8px;
+    }
+
+    .p7 {
+        @extend %body1;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
 
 
 
