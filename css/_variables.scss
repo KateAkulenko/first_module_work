@@ -29,7 +29,7 @@ $primary_blue: #5373FD;
         } 
     } 
 
-%svgstyle {
+    %svgstyle {
         fill: white;
         width: 32px;
         height: 32px;
@@ -37,3 +37,10 @@ $primary_blue: #5373FD;
             fill: #5373FD;
         }
     }
+
+%focusoutline {
+    outline-offset: 8px;
+    outline: 1px solid blue;
+    transition: 0.5s;
+} 
+

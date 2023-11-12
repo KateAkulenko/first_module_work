@@ -99,21 +99,24 @@
                 @extend %pheader;
                 padding-bottom: 4px;
              }
-             
-             svg {
+
+             a {
+                
+                &:focus {
+                    @extend %focusoutline;
+                }
+
+                 svg {
                 fill: white;
                 width: 14px;
                 height: 16px;
                 flex-shrink: 0;
 
-                &:focus {
-                    border: 2px solid blue;
-
+                    &:hover {
+                    fill: #9eaef8;
+                    }
                 }
-                &:hover {
-                   fill: #9eaef8;
-                }
-             }
+            }
         }
     }
 }
@@ -147,11 +150,16 @@
                 flex-direction: row;
                 gap: 40px;
 
+             
                 a {
                     text-decoration: none;
                     @extend %h4;
                     &:hover {
                         color: #9eaef8;
+                    }
+
+                    &:focus {
+                        @extend %focusoutline;
                     }
                 }
             }
@@ -290,7 +298,6 @@
                         width: 350px;
                         height: 220px;
                     }
-                
                 }
             }
         }      
@@ -307,14 +314,16 @@
 
         .line {
             padding-top: 60px;
+            width: 872px;
+            height: 90px;
         }
 
         .icon_box {
             display: flex;
+            justify-content: center;
             gap: 25px;
             position: absolute;
             top: 107px;
-            left: 0;
 
               .icon_box_item {
             width: 424px;
@@ -508,6 +517,9 @@
             gap: 32px;
 
             a {
+                &:focus {
+                   @extend %focusoutline;
+                }
                 .svg1 {
                   @extend %svgstyle;
                   width: 20px;
@@ -547,22 +559,89 @@
         
 }
 
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1360px) {
     .container {
-      width: 540px;
+      width: 1140px;
     }
 
-    .hamburger {
-        display: flex;
-       }
+    .background_menu {
+        .container {
+            .navigation {
+             width: 60%;
+            }
+        }
+    }
+    .why_background {
+        .container {
+            .why_info {
+                display: flex;
+                align-items: center;
+                padding: 124px 0 0 0;
+                gap: 121px;
+            }
+        }
+    }
+
+    .why_background2 {
+        .container {
+            .line {
+                padding-top: 81px;
+                width: 752px;
+                height: 69px;
+            }
+            .icon_box {
+                gap: 24px;
+                top: 121px;
+               
+                .icon_box_item {
+                width: 354px;
+              }
+            }
+        }
+    }
+
+    .book_now_1 {
+        height: 712px;
+        .container {
+
+            .info {
+                width: 494px;
+                height: 284px;
+            }
+        }
+    }
+
+    .book_now_2 {
+        height: 712px;
+        .container {
+
+            .info {
+                width: 494px;
+                height: 284px;
+            }
+        }
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// @media screen and (max-width: 576px) {
+//     .container {
+//       width: 540px;
+//     }
+
+//     .hamburger {
+//         display: flex;
+//        }
+
+// }
