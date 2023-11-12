@@ -28,3 +28,12 @@ $primary_blue: #5373FD;
             border: 1px solid blue;
         } 
     } 
+
+%svgstyle {
+        fill: white;
+        width: 32px;
+        height: 32px;
+        &:hover {
+            fill: #5373FD;
+        }
+    }

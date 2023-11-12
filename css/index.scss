@@ -481,18 +481,70 @@
     height: 268px;
     background-color: #000;
 
-    .p6 {
-        text-align: center;
-        @extend %h3;
-        padding-top: 80px;
-        padding-bottom: 8px;
-    }
+    .container {
 
-    .p7 {
-        @extend %body1;
-        padding-bottom: 20px;
-        text-align: center;
+        @extend %header_div;
+
+
+        .p6 {
+        
+            @extend %h3;
+            padding-top: 80px;
+            padding-bottom: 8px;
+        }
+
+        .p7 {
+            @extend %body1;
+            padding-bottom: 20px;
+        
+        }
+
+        .social {
+            width: 235;
+            height: 32;
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            gap: 32px;
+
+            a {
+                .svg1 {
+                  @extend %svgstyle;
+                  width: 20px;
+                }
+            }
+            a {
+                .svg2 {
+                  @extend %svgstyle;
+                }
+            }
+
+            a {
+                .svg3 {
+                  @extend %svgstyle;
+                  width: 28px;
+                 }
+            }
+
+            a {
+                .svg4 {
+                    width: 36px;
+                    height: 32px;
+                    fill: white;
+                        &:hover {
+                        fill: #5373FD;
+                    }
+                }
+            }
+
+            a {
+                .svg5 {
+                    @extend %svgstyle;
+                }
+            }
+        }
     }
+        
 }
 
 
