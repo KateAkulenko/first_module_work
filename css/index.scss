@@ -43,6 +43,7 @@
                     input[type=search] {
                     width: 647px;
                     height: 60px;
+                    padding-left: 36px;
 
                     
                     &:focus {
@@ -70,7 +71,6 @@
 
                     &:focus {
                         border: 2px solid blue;
-
                     }
 
                     &:hover {
@@ -154,8 +154,18 @@
                 a {
                     text-decoration: none;
                     @extend %h4;
+                    position: relative;
                     &:hover {
-                        color: #9eaef8;
+                        &::after {
+                            position: absolute;
+                            left: 50%;
+                            transform: translate(-50%);
+                            display: block;
+                            content: '';
+                            width: 80%;
+                            height: 1px;
+                            background: #9eaef8;
+                        }
                     }
 
                     &:focus {
@@ -439,11 +449,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
     .container {
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         h2 {
             @extend %h2;
-            text-align: center;
             padding-top: 120px;
             padding-bottom: 60px;
         }
@@ -454,10 +467,13 @@
             .img_wrapper_3 {
                 width: 440px;
                 height: 280px;
+                display: flex;
+                justify-content: flex-start;
+
 
                 img {
-                    height: 100%;
                     width: auto;
+                    height: 100%;
                 }
             }
 
@@ -622,11 +638,111 @@
         }
     }
 
+    .rewiev {
+        height: 708px;
+        .container {
+
+            .rewiev_info {
+                .img_wrapper_3 {
+                    width: 380px;
+                    height: 308px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .rewiev_text {
+                    width: 640px;
+                    height: 212px;
+                }
+            }
+        }
+    }
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+      width: 960px;
+    }
+   
+    .background_menu {
+        .container {
+            .navigation {
+             width: 80%;
+            }
+        }
+    }
+
+    .why_background {
+        .container {
+            .why_info {
+                gap: 24px;
+            }
+        }
+    }
+
+    .why_background2 {
+        .container {
+            .line {
+                padding-top: 87px;
+                width: 632px;
+                height: 57px;
+            }
+            .icon_box {
+                gap: 0;
+                top: 121px;
+               
+                .icon_box_item {
+                width: 318px;
+                height: auto;
+              }
+            }
+        }
+    }
+
+    .book_now_1 {
+        .container {
+
+            .info {
+                width: 486px;
+            }
+        }
+    }
+
+    .book_now_2 {
+        .container {
+
+            .info {
+                width: 486px;
+            }
+        }
+    }
+
+    .rewiev {
+        height: 736px;
+        .container {
+
+            .rewiev_info {
+                .img_wrapper_3 {
+                    width: 320px;
+                    height: 336px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .rewiev_text {
+                    width: 520px;
+                    height: 240px;
+                }
+            }
+        }
+    }
 
 
-
+}
 
 
 
