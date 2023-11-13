@@ -41,9 +41,13 @@
                     position: relative;
                               
                     input[type=search] {
-                    width: 647px;
+                    width: 611px;
                     height: 60px;
                     padding-left: 36px;
+
+                    &::placeholder {
+                        @extend %plh;
+                    }
 
                     
                     &:focus {
@@ -53,10 +57,7 @@
                         }
                     }
 
-                    &::placeholder {
-                        @extend %plh;
-                        padding-left: 36px;
-                    }
+                 
                 }
 
                 button {
