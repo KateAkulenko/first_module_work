@@ -38,16 +38,18 @@
     }
 
     .header_search {
-        @extend %header_div;
         padding-bottom: 211px;
 
         form {
             position: relative;
+            max-width: 611px;
+            margin: 0 auto;
 
             input[type=search] {
-                width: 611px;
-                height: 60px;
+                width: 100%;
+                height: 65px;
                 padding-left: 36px;
+                box-sizing: border-box;
 
                 &::placeholder {
                     @extend %plh;
@@ -251,7 +253,7 @@
 .why_background {
     background-image: url(../img/WhyBackground.png);
     width: 100%;
-    height: 704px;
+    min-height: 704px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -262,10 +264,14 @@
             align-items: center;
             padding: 124px 112px 124px 0px;
             gap: 136px;
+            
 
             .why_info_content {
-                width: 648px;
-                height: 324px;
+                max-width: 648px;
+                height: auto;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
 
                 h2 {
                     @extend %h2;
@@ -276,9 +282,15 @@
                     @extend %body2;
                     display: flex;
                     flex-direction: column;
-                    height: 168px;
+                    height: auto;
                     justify-content: space-between;
                     padding-bottom: 32px;
+
+                    p {
+                        &:first-child {
+                            padding-bottom: 18px;
+                        }
+                    }
                 }
 
                 a {
@@ -365,7 +377,8 @@
 }
 
 .book_now_1 {
-    height: 684px;
+    min-height: 684px;
+    width: 100%;
     background-image: url(../img/spain1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -387,14 +400,17 @@
 
             .p1 {
                 @extend %h6;
+                padding-bottom: 16px;
             }
 
             .p2 {
                 @extend %h5;
+                padding-bottom: 16px;
             }
 
             .p3 {
                 @extend %body2;
+                padding-bottom: 24px;
             }
 
             a {
@@ -408,14 +424,16 @@
 }
 
 .book_now_2 {
-    height: 684px;
+    min-height: 684px;
     background-image: url(../img/spain2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 
     .container {
         position: relative;
+        
 
         .info {
             min-height: 256px;
@@ -425,17 +443,21 @@
             position: absolute;
             top: 220px;
             right: 0;
+          
 
             .p1 {
                 @extend %h6;
+                padding-bottom: 16px;
             }
 
             .p2 {
                 @extend %h5;
+                padding-bottom: 16px;
             }
 
             .p3 {
                 @extend %body2;
+                padding-bottom: 24px;
             }
 
             a {
@@ -449,7 +471,7 @@
 }
 
 .rewiev {
-    height: 680px;
+    min-height: 680px;
     background-image: url(../img/review.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,39 +490,35 @@
         }
 
         .rewiev_info {
-            // display: flex;
+            display: flex;
             background-color: #333;
-
+          
             .img_wrapper_3 {
                 max-width: 440px;
-                height: 100%;
-                display: inline-block;
-                // display: flex;
-                // justify-content: center;
-
-
+                min-width: 320px;
+                height: auto;
                 img {
                     width: 100%;
-                    height: auto;
-                    object-fit: cover;
+                    height: 100%;
+                    object-fit: cover;                   
                 }
             }
 
             .rewiev_text {
                 box-sizing: border-box;
-                display: inline-block;
-                max-width: 765px;
-                min-height: 184px;
+                max-width: 800px;
+                min-height: 280px;
                 padding: 48px 60px 48px 60px;
-                // background-color: #333;
-
+          
                 .p4 {
                     @extend %h5;
                     padding-bottom: 16px;
+                    
                 }
 
                 .p5 {
                     @extend %body2;
+                 
 
                     svg {
                         width: 20px;
@@ -630,7 +648,7 @@
     }
 
     .book_now_1 {
-        height: 712px;
+        min-height: 712px;
 
         .container {
 
@@ -642,7 +660,7 @@
     }
 
     .book_now_2 {
-        height: 712px;
+        min-height: 712px;
 
         .container {
 
@@ -654,24 +672,17 @@
     }
 
     .rewiev {
-        height: 708px;
+        min-height: 708px;
 
         .container {
 
             .rewiev_info {
                 .img_wrapper_3 {
-                    width: 380px;
-                    height: 308px;
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
+                    max-width: 380px;
                 }
 
                 .rewiev_text {
-                    width: 640px;
-                    height: 212px;
+                    min-height: 212px;
                 }
             }
         }
@@ -680,7 +691,7 @@
 
 @media screen and (max-width: 1024px) {
     .container {
-        width: 960px;
+    width: 960px;
     }
 
     .background_menu {
@@ -695,7 +706,11 @@
         .container {
             .why_info {
                 gap: 24px;
-            }
+                
+                .why_info_content {
+                max-width: 550px;
+                }
+            }          
         }
     }
 
@@ -737,55 +752,182 @@
         }
     }
 
-    .rewiev {
-        height: 736px;
-
-        .container {
-
-            .rewiev_info {
-                .img_wrapper_3 {
-                    width: 320px;
-                    height: 336px;
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-
-                .rewiev_text {
-                    width: 520px;
-                    height: 240px;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 720px;
+        max-width: 720px;
+    }
+
+    .background_menu {
+        .container {
+            flex-direction: column;
+            gap: 32px;
+
+            .logo {
+                justify-content: center;
+                width: 100%;
+            }
+            .navigation {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+
+    .why_background {
+        min-height: 659px;
+
+        .container {
+            .why_info {
+                flex-direction: column-reverse;
+                padding: 60px 0 60px 0px;
+                gap: 32px;
+
+                .why_info_content {
+                    max-width: 720px;
+                    align-items: center;
+
+                    .why_info_txt {
+                        text-align: center;
+                    }
+                }
+
+                .why_info_img {
+                    flex-direction: row;
+                    height: auto;
+                  
+
+                    .img_wrapper1 {
+                       
+                        img {
+                            max-width: 100%;
+                            height: 219px;
+                            object-fit: cover;
+                        }
+    
+                    }
+    
+                    .img_wrapper2 {    
+
+                        img {
+                            max-width: 100%;
+                            height: 219px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .why_background2 {
+        height: 658px;
+
+        .container {
+            position: unset;
+            .line {
+                display: none;
+            }
+            .icon_box {
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 60px 0 60px 0;
+                gap: 60px;
+                position: unset;
+             }
+        }
+    }
+
+    .book_now_1 {
+        min-height: 588px;
+        .container {
+            position: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+                width: 720px;
+                padding: 44px 32px 44px 32px;
+                background: rgba(35, 35, 35, 0.90);
+                position: unset;
+                margin: 120px 0;
+                height: auto;
+            }
+
+        }
+    }
+    
+    .book_now_2 {
+        min-height: 588px;
+        .container {
+            position: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+                width: 720px;
+                padding: 44px 32px 44px 32px;
+                background: rgba(35, 35, 35, 0.90);
+                position: unset;
+                margin: 120px 0;
+                height: auto;
+            }
+
+        }
+    }
+
+    .rewiev {
+        padding-bottom: 120px;
+        .container {
+            h2 {
+                padding-top: 60px;
+            }
+
+            .rewiev_info {
+                flex-direction: column;
+    
+                .img_wrapper_3 {
+                    max-width: 100%;
+                    width: 100%;
+                }
+    
+            }
+        }
+
+      
     }
 }
 
 
+@media screen and (max-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
 
-// @media screen and (max-width: 576px) {
-//     .container {
-//       width: 540px;
-//     }
+    .hamburger {
+        display: flex;
+       }
 
-//     .hamburger {
-//         display: flex;
-//        }
-
-// }
+}
 
 // .light_theme {
 //     &:has(#toggle_theme:checked) {
         
 //         .footer {
 //             background-color: rgb(153, 170, 248);
+//             .container {
+                       
+//                 .p6 {
+//                     color: #000
+//                 }
+        
+//                 .p7 {
+//                    color: #000;
+//                 }
+//             }
 //         }
 //     }
 // }
